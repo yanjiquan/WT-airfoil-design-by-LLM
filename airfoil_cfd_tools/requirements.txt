@@ -1,0 +1,7 @@
+# Python dependencies for Dynamic Airfoil Tool (target machine)
+# Install: pip install -r requirements.txt
+# NOTE: Fluent/ANSYS must be installed separately; set FLUENT_EXE
+# in config.py after unpacking.
+numpy>=1.24
+matplotlib>=3.7
+h5py>=3.8
