@@ -1,0 +1,4 @@
+# OpenFAST airfoil-replacement platform - dependencies
+# Only numpy is required at runtime (Python 3.8+).
+# Install:  pip install -r requirements.txt
+numpy>=1.20
