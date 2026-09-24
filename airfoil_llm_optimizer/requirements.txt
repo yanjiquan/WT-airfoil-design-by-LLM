@@ -1,0 +1,11 @@
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+tqdm>=4.64
+jsonlines>=3.1
+# Optional — only needed for the in-process "local" inference backend (src/llm_model.py):
+# torch>=2.1
+# transformers>=4.40
+# peft>=0.10
+# safetensors>=0.4
+# tiktoken>=0.6

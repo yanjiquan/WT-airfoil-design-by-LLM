@@ -1,0 +1,43 @@
+{
+    "sample_delta_by_amp": {"5.5": 1.0, "10.0": 1.0},
+    "roughness": ["光滑", "粗糙"],
+    "decay_factor": 0.045,
+    "conditions": {
+        "R1":  {"reynolds": 750000.0,  "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 0.6, "decay_freq": 0.036},
+        "R2":  {"reynolds": 750000.0,  "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 1.2, "decay_freq": 0.072},
+        "R3":  {"reynolds": 750000.0,  "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 1.8, "decay_freq": 0.108},
+        "R4":  {"reynolds": 1000000.0, "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 0.6, "decay_freq": 0.027},
+        "R5":  {"reynolds": 1000000.0, "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 1.2, "decay_freq": 0.054},
+        "R6":  {"reynolds": 1000000.0, "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 1.8, "decay_freq": 0.081},
+        "R7":  {"reynolds": 1250000.0, "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 0.6, "decay_freq": 0.022},
+        "R8":  {"reynolds": 1250000.0, "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 1.2, "decay_freq": 0.043},
+        "R9":  {"reynolds": 1250000.0, "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 1.8, "decay_freq": 0.065},
+        "R10": {"reynolds": 1500000.0, "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 0.6, "decay_freq": 0.018},
+        "R11": {"reynolds": 1500000.0, "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 1.2, "decay_freq": 0.036},
+        "R12": {"reynolds": 1500000.0, "mean_aoa": 14.0, "amplitude": 10.0, "osc_freq": 1.8, "decay_freq": 0.054}
+    },
+    "cycle": ["上升", "下降"],
+    "vllm": {
+        "base_url": "http://127.0.0.1:8000/v1",
+        "api_key": "EMPTY",
+        "model_high": "high",
+        "model_low": "low",
+        "model_base": "base",
+        "timeout": 120,
+        "retries": 3
+    },
+    "concurrency": 48,
+    "test_mode": {
+        "enabled": false,
+        "conditions": ["R1"],
+        "angles": [12.0, 13.0, 14.0, 15.0, 16.0],
+        "population": 2,
+        "generations": 5
+    },
+    "objective": {
+        "method": "A3",
+        "cl_min": 0.7276, "cl_max": 1.3160,
+        "hyst_min": 6.5, "hyst_max": 9.5,
+        "hyst_floor": 0.05
+    }
+}
